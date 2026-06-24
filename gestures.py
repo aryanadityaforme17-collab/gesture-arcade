@@ -26,8 +26,8 @@ def fingers_up(lm_list):
 
 
 def classify_gesture(fingers,lmList):
-    pinch = _distance(lmList, 4, 8) / _hand_scale(lmList[0],lmList[9])
-    if pinch < 0.3 and fingers[2] and fingers[3] and fingers[4]:
+    pinchratio = _distance(lmList, 4, 8) / _hand_scale(lmList[0],lmList[9])
+    if pinchratio < 0.3 and fingers[2] and fingers[3] and fingers[4]:
         return "OK"
     if fingers == [0, 0, 0, 0, 0]:
         return "STONE"
@@ -39,8 +39,8 @@ def classify_gesture(fingers,lmList):
         return "SCISSOR"
     if fingers == [1, 0, 0, 0, 0]:
         return "THUMBS UP"
-    if fingers == [0, 0, 1, 0, 0]:
-        return "F**K YOU"
+#    if fingers == [0, 0, 1, 0, 0]:
+#        return "F**K YOU"
     if fingers == [0, 0, 0, 0, 1]:
         return "Need to pee"
     return "UNKNOWN"

@@ -34,6 +34,7 @@ while True:
         break
 
     img = detector.findHands(img)
+    img=cv2.flip(img,1)
     lmList = detector.findPosition(img,draw=False)
     if len(lmList)!=0:
         # print(lmList[4],lmList[8])

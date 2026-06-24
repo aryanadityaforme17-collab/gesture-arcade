@@ -9,3 +9,14 @@ blank[:]=0,255,0
 cv.imshow('Green',blank) 
  
 cv.waitKey(0)
+import cv2 as cv2
+import numpy as np
+
+blank=np.zeroes((500,500,3),dtype='uints')
+#zeroes(pixels,pixels,number of colour types used)
+cv.imshow('blank',blank)
+#paint
+blank[:]=0,255,0
+cv.imshow('Green',blank) 
+ 
+cv.waitKey(0)
